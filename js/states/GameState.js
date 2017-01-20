@@ -8,6 +8,10 @@ GameState.prototype = {
 	},
 	create: function(){
 		console.log("preload Game");
+
+		Game.phaser_game.backgroundColor = "#4488AA";
 	},
-	update: function(){}
+	update: function(){
+
+	}
 }
