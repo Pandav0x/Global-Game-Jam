@@ -8,6 +8,7 @@ PreloadState.prototype = {
 	},
 	create: function(){
 		console.log("create preload");
+		game.phaser_game.state.start("gameState");
 	},
 	update: function(){}
 }

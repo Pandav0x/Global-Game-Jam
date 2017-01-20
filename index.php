@@ -6,12 +6,13 @@
     <script src="./assets/libs/Phaser.js"></script>
 
     <!--the actual game-->
-    <script src="js/states/CreditState.js"></script>
-    <script src="js/states/GameState.js"></script>
-    <script src="js/states/LoseState.js"></script>
-    <script src="js/states/MenuState.js"></script>
-    <script src="js/states/PreloadState.js"></script>
-    <script src="js/states/WinState.js"></script>
+    <?php
+      $files = scandir("./js/states/");
+      foreach($files as $key => $value)
+        if(substr($value, 0, 1) != ".")
+          echo "<script src='js/states/$value'></script>";
+    ?>
+
     <script src="js/Game.js"></script>
   </head>
   <body>
