@@ -25,8 +25,16 @@ Game.prototype.init = function(){
     this.phaser_game.state.add("winState", WinState);
     this.phaser_game.state.add("loseState", LoseState);
     this.phaser_game.state.add("creditState", CreditState);
+    this.phaser_game.state.add("chooseState", ChooseState);
     this.phaser_game.state.add("levelOneState", LevelOneState);
     this.phaser_game.state.add("levelTwoState", LevelTwoState);
+    this.phaser_game.state.add("levelThreeState", LevelThreeState);
+    this.phaser_game.state.add("levelFourState", LevelFourState);
+    this.phaser_game.state.add("levelFiveState", LevelFiveState);
+    /*this.phaser_game.state.add("levelSixState", LevelSixState);
+    this.phaser_game.state.add("levelSevenState", LevelSevenState);
+    this.phaser_game.state.add("levelEightState", LevelEightState);
+    this.phaser_game.state.add("levelNineState", LevelNineState);*/
     this.phaser_game.state.start("preloadState");
 }
 

@@ -18,7 +18,7 @@ PreloadState.prototype = {
 	},
 	create: function(){
 		console.log("create preload");
-		game.phaser_game.state.start("levelTwoState");
+		game.phaser_game.state.start("chooseState");
 	},
 	update: function(){}
 }

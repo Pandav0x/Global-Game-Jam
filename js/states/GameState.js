@@ -1,7 +1,6 @@
 var GameState = function(){};
 var touchPad;
 console.log("GameState");
-var touchPad;
 GameState.prototype = {
 	preload: function(){
 		console.log("preload Game");
