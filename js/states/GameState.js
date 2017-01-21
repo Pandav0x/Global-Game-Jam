@@ -31,8 +31,6 @@ GameState.prototype = {
 	},
 	update: function(){
 		touchPad.update();
-
-
 	},
 
 	render: function(){

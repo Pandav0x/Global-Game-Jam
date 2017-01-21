@@ -1,28 +1,28 @@
-var LevelTwoState = function(){};
+var LevelOneState = function(){};
 var touchPad;
-console.log("LevelTwoState");
+console.log("LevelOneState");
 var touchPad;
-LevelTwoState.prototype = {
+LevelOneState.prototype = {
 	preload: function(){
-		console.log("preload level2");
+		console.log("preload level1");
 	},
 	create: function(){
-		console.log("create level2");
+		console.log("create level1");
 
 		game.phaser_game.stage.backgroundColor = "#4488AA";
 
 		game.phaser_game.input.mouse.capture = true;
 
-		// un objet avec en param (x,y) pour choisir son emplacement dans le monde
+		// un objet avec en param (x,y,scaling) pour choisir son emplacement dans le monde et sa taille dans le 3ème champ
 		var scaling = 0.15;// taille de tout les éléments
-		
-		var redBoat = new RedBoat(200,200);
-		var redBoat2 = new RedBoat(400,400);
-		var greenCorail = new GreenCorail(400,450);
-		
-		//Mettre le touchpad à x = 0, x = 500
-		touchpad = new Touchpad(0,500);
 
+		var redBoat = new RedBoat(200,300,scaling);
+		var rockHouse = new RockHouse(500,200,scaling);
+
+		//Mettre le touchpad à x = 0, x = 500
+		touchPad = new TouchPad(0,500);
+
+		
 	},
 	update: function(){
 		touchPad.update();
