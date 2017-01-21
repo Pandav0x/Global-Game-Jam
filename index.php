@@ -5,7 +5,8 @@
     <?php
       importAll("./assets/libs"); //import all libraries
       importAll("./js/states"); //import all game states
-      importAll("./js/models"); //import all game models
+      importAll("./js/models"); //import all game objects
+      importAll("./js/states/levles"); //import all game levels
     ?>
     <script src="js/Game.js"></script>
   </head>
