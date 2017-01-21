@@ -16,6 +16,7 @@ PreloadState.prototype = {
 		game.phaser_game.load.image('mountain', game.sprite_folder + 'Mountain.png');
 		game.phaser_game.load.image('touchpad', game.sprite_folder + 'TouchPad.png');
 		game.phaser_game.load.image('menu', game.sprite_folder + "Choose.png");
+		game.phaser_game.load.image('laurier', game.sprite_folder + "laurier.png");
 
 		game.phaser_game.load.atlasJSONHash('buttonPlay', game.sprite_folder+'button.png', game.sprite_folder+'button.json');
 		game.phaser_game.load.atlasJSONHash('buttonChoose', game.sprite_folder+'buttonPlay.png', game.sprite_folder+'buttonPlay.json');
