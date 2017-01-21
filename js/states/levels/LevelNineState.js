@@ -1,13 +1,13 @@
-var LevelTwoState = function(){};
+var LevelNineState = function(){};
 
-console.log("LevelTwoState");
+console.log("LevelNineState");
 
-LevelTwoState.prototype = {
+LevelNineState.prototype = {
 	preload: function(){
-		console.log("preload level2");
+		console.log("preload level9");
 	},
 	create: function(){
-		console.log("create level2");
+		console.log("create level9");
 
 		game.phaser_game.stage.backgroundColor = "#4488AA";
 
