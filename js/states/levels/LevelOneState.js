@@ -21,6 +21,8 @@ LevelOneState.prototype = {
 
 		//Mettre le touchpad à x = 0, x = 500
 		touchPad = new TouchPad(0,500);
+		
+		buttonTest = game.phaser_game.add.button(20, 420, 'buttonChoose', actionOnClickTest, this, 2, 1, 0);
 
 	},
 	update: function(){
@@ -37,4 +39,10 @@ LevelOneState.prototype = {
 		game.phaser_game.debug.text("Left Button: " + game.phaser_game.input.activePointer.leftButton.isDown, 300, 132);
 		//game.phaser_game.debug.text("Over: " + touchPad.input.pointerOver(), 32, 32);
 	}
+}
+
+function actionOnClickTest () {
+
+	console.log("winState");
+    game.phaser_game.state.start("winState");
 }
