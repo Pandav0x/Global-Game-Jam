@@ -1,0 +1,36 @@
+{"frames": {
+
+"Menu1.png":
+{
+	"frame": {"x":0,"y":0,"w":148,"h":69},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":148,"h":69},
+	"sourceSize": {"w":148,"h":69}
+},
+"Menu2.png":
+{
+	"frame": {"x":148,"y":0,"w":148,"h":69},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":148,"h":69},
+	"sourceSize": {"w":148,"h":69}
+},
+"Menu3.png":
+{
+	"frame": {"x":296,"y":0,"w":148,"h":69},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":148,"h":69},
+	"sourceSize": {"w":148,"h":69}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "MenuButton.png",
+	"format": "RGBA8888",
+	"size": {"w":444,"h":69},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:d59ff3f25dd5634820aaddf3b0c4e4ff:7a710159d992780f9b061f22bae7fb25:81e2bf04d15390b980a02f7d56d7a8d0$"
+}
+}
