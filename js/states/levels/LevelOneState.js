@@ -1,4 +1,4 @@
-var LevelOneState = function(){};
+var LevelOneState = function(){this.id = 1};
 var touchPad;
 console.log("LevelOneState");
 var touchPad;
@@ -22,10 +22,15 @@ LevelOneState.prototype = {
 		//Mettre le touchpad à x = 0, x = 500
 		touchPad = new TouchPad(0,500);
 
-		
 	},
 	update: function(){
 		touchPad.update();
+
+		//If condition de victoire
+
+		//game.nextLevel = "Two";
+		//game.finishedLevels[0] = true;
+		//game.phaser_game.state.start("winState");
 	},
 
 	render: function(){
