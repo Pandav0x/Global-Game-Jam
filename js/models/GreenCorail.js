@@ -1,4 +1,4 @@
-var greenCorail = function(x,y){
+var GreenCorail = function(x,y){
 
     this.x = x;
     this.y = y;

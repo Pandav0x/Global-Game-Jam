@@ -13,6 +13,15 @@ GameState.prototype = {
 
 		game.phaser_game.input.mouse.capture = true;
 
+		// un objet avec en param (x,y) pour choisir son emplacement dans le monde
+		var blueBoat = new BlueBoat(50,50);
+		var redBoat = new RedBoat(100,50);
+		var greenCorail = new GreenCorail(150,50);
+		var pinkCorail = new PinkCorail(200,50);
+		var mountain = new Mountain(250,50);
+		var rockHouse = new RockHouse(300,50);
+		var pilotiHouse = new PilotiHouse(350,50);
+
 		touchPad = new TouchPad(0,500);
 
 		
