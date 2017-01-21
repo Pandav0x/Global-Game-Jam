@@ -6,6 +6,8 @@ PreloadState.prototype = {
 	preload: function(){
 		console.log("preload preload");
 		game.phaser_game.physics.startSystem(Phaser.Physics.ARCADE);
+
+		game.phaser_game.load.image('touchpad', game.sprite_folder + 'TouchPad.png');
 	},
 	create: function(){
 		console.log("create preload");
