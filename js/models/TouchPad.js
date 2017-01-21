@@ -25,7 +25,8 @@ TouchPad.prototype.update = function(){
 
     if (game.phaser_game.time.now > this.nextFire)
     {
-        if(this.sprite.input.pointerOver() && game.phaser_game.input.activePointer.leftButton.isDown){
+        if(this.sprite.input.pointerOver() && game.phaser_game.input.activePointer.leftButton.isDown)
+        {
             this.waveStrength++;
 
             if(this.waveStrength <= 500)
@@ -37,6 +38,15 @@ TouchPad.prototype.update = function(){
             this.back += 1;
 
             console.log("Wave Down");
+
+            //wave intensity
+              var lastduration = 0;
+              game.phaser_game.input.onUp.add(function(pointer){
+                 lastDuration = pointer.duration;
+              }, this);
+              this.waveStrength = game.phaser_game.input.activePointer.duration;
+              console.log(this.waveStrength);
+            //end
 
             this.nextFire = game.phaser_game.time.now + this.fireRate;
         }
