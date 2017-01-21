@@ -15,6 +15,18 @@ PreloadState.prototype = {
 		game.phaser_game.load.image('rockHouse', game.sprite_folder + 'RockHouse.png');
 		game.phaser_game.load.image('mountain', game.sprite_folder + 'Mountain.png');
 		game.phaser_game.load.image('touchpad', game.sprite_folder + 'TouchPad.png');
+
+		game.phaser_game.load.atlasJSONHash('buttonLevel1', game.sprite_folder+'buttonPlay.png', game.sprite_folder+'buttonPlay.json');
+		game.phaser_game.load.atlasJSONHash('buttonLevel2', game.sprite_folder+'buttonPlay.png', game.sprite_folder+'buttonPlay.json');
+		game.phaser_game.load.atlasJSONHash('buttonLevel3', game.sprite_folder+'buttonPlay.png', game.sprite_folder+'buttonPlay.json');
+		game.phaser_game.load.atlasJSONHash('buttonLevel4', game.sprite_folder+'buttonPlay.png', game.sprite_folder+'buttonPlay.json');
+		game.phaser_game.load.atlasJSONHash('buttonLevel5', game.sprite_folder+'buttonPlay.png', game.sprite_folder+'buttonPlay.json');
+		game.phaser_game.load.atlasJSONHash('buttonLevel6', game.sprite_folder+'buttonPlay.png', game.sprite_folder+'buttonPlay.json');
+		game.phaser_game.load.atlasJSONHash('buttonLevel7', game.sprite_folder+'buttonPlay.png', game.sprite_folder+'buttonPlay.json');
+		game.phaser_game.load.atlasJSONHash('buttonLevel8', game.sprite_folder+'buttonPlay.png', game.sprite_folder+'buttonPlay.json');
+		game.phaser_game.load.atlasJSONHash('buttonLevel9', game.sprite_folder+'buttonPlay.png', game.sprite_folder+'buttonPlay.json');
+
+
 	},
 	create: function(){
 		console.log("create preload");
