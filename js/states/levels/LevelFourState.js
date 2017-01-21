@@ -14,8 +14,18 @@ LevelFourState.prototype = {
 		game.phaser_game.input.mouse.capture = true;
 
 		touchPad = new TouchPad(0,500);
+
+		var scaling = 0.15;
+		var rockHouse = new RockHouse(370,180,scaling);
+		var redBoat = new RedBoat(250,250,scaling);
+		var redBoat = new RedBoat(450,250,scaling);
 	},
 	update: function(){
 		touchPad.update();
+	},
+
+	render: function(){
+		game.phaser_game.debug.text("Left Button: " + game.phaser_game.input.activePointer.leftButton.isDown, 300, 132);
+		//game.phaser_game.debug.text("Over: " + touchPad.input.pointerOver(), 32, 32);
 	}
 }

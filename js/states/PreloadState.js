@@ -26,6 +26,8 @@ PreloadState.prototype = {
 		game.phaser_game.load.atlasJSONHash('buttonLevel8', game.sprite_folder+'buttonPlay.png', game.sprite_folder+'buttonPlay.json');
 		game.phaser_game.load.atlasJSONHash('buttonLevel9', game.sprite_folder+'buttonPlay.png', game.sprite_folder+'buttonPlay.json');
 
+		game.phaser_game.load.atlasJSONHash('buttonChoose', game.sprite_folder+'buttonPlay.png', game.sprite_folder+'buttonPlay.json');
+		game.phaser_game.load.atlasJSONHash('buttonNext', game.sprite_folder+'buttonPlay.png', game.sprite_folder+'buttonPlay.json');
 
 	},
 	create: function(){

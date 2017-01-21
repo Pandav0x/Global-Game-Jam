@@ -14,6 +14,12 @@ var Game = function(){
 
     //sound path
     this.ambiance_folder = "./assets/sounds/";
+
+    //Next level (mise à jour à la fin d'un niveau)
+    this.nextLevel = "Zero";
+
+    //Finished levels
+    this.finishedLevels = [false, false, false, false, false, false, false, false, false];
 }
 
 Game.prototype.init = function(){

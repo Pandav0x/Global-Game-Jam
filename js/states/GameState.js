@@ -19,10 +19,10 @@ GameState.prototype = {
 		var redBoat = new RedBoat(100,150,scaling);
 		var rockHouse = new RockHouse(300,50,scaling);
 
-		/*var greenCorail = new GreenCorail(150,50);
-		var pinkCorail = new PinkCorail(200,50);
-		var mountain = new Mountain(250,50);
-		var pilotiHouse = new PilotiHouse(350,50);*/
+		/*var greenCorail = new GreenCorail(150,50,scaling);
+		var pinkCorail = new PinkCorail(200,50,scaling);
+		var mountain = new Mountain(250,50,scaling);
+		var pilotiHouse = new PilotiHouse(350,50,scaling);*/
 
 		touchPad = new TouchPad(0,500);
 
