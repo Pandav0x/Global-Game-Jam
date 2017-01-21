@@ -56,6 +56,10 @@ TouchPad.prototype.update = function(){
         this.back = 0;
     }
 
+    $.each(this.waveArrays,function(index,value){
+        value.growth();
+    });
+
     /*for (var i = 0; i <= this.back; i++){
         if(this.waveArrays.length > 0){
             console.log("Vague :" + this.waveArrays[i]);
