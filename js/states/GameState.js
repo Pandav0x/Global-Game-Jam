@@ -9,7 +9,6 @@ GameState.prototype = {
 		console.log("create Game");
 
 		game.phaser_game.stage.backgroundColor = "#4488AA";
-
 		game.phaser_game.input.mouse.capture = true;
 
 		// un objet avec en param (x,y,scaling) pour choisir son emplacement dans le monde et sa taille dans le 3ème champ
