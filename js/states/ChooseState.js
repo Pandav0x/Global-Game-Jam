@@ -22,7 +22,9 @@ ChooseState.prototype = {
 	    buttonLevel9 = game.phaser_game.add.button(400, 420, 'buttonLevel9', actionOnClickLevel9, this, 2, 1, 0);
 	},
 
-	update: function(){}
+	update: function(){
+		
+	}
 	
 }
 

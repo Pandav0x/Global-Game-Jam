@@ -7,6 +7,10 @@ var TouchPad = function(x,y){
     this.fireRate = 500;
     this.nextFire = 0; // shoot da wave
 
+    this.mouseX = game.phaser_game.input.x;
+    this.mouseY = game.phaser_game.input.y;
+    this.waveArrays[];
+
     this.waveStrength = 0;
 
     console.log("Create TouchPad");
@@ -24,7 +28,11 @@ TouchPad.prototype.update = function(){
             if(this.waveStrength <= 500)
                 this.waveStrength = 500;
 
+            var wave = new Wave(this.mouseX,this.mouseY);
+
             this.nextFire = game.phaser_game.time.now + this.fireRate;
         }
     }
+
+    wave.update();
 }
