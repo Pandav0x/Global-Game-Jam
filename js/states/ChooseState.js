@@ -11,15 +11,19 @@ ChooseState.prototype = {
 
 		game.phaser_game.stage.backgroundColor = '#182d3b';
 
-	    buttonLevel1 = game.phaser_game.add.button(20, 20, 'buttonLevel1', actionOnClickLevel1, this, 2, 1, 0);
-	    buttonLevel2 = game.phaser_game.add.button(20, 220, 'buttonLevel2', actionOnClickLevel2, this, 2, 1, 0);
-	    buttonLevel3 = game.phaser_game.add.button(20, 420, 'buttonLevel3', actionOnClickLevel3, this, 2, 1, 0);
-	    buttonLevel4 = game.phaser_game.add.button(200, 20, 'buttonLevel4', actionOnClickLevel4, this, 2, 1, 0);
-	    buttonLevel5 = game.phaser_game.add.button(200, 220, 'buttonLevel5', actionOnClickLevel5, this, 2, 1, 0);
-	    buttonLevel6 = game.phaser_game.add.button(200, 420, 'buttonLevel6', actionOnClickLevel6, this, 2, 1, 0);
-	    buttonLevel7 = game.phaser_game.add.button(400, 20, 'buttonLevel7', actionOnClickLevel7, this, 2, 1, 0);
-	    buttonLevel8 = game.phaser_game.add.button(400, 220, 'buttonLevel8', actionOnClickLevel8, this, 2, 1, 0);
-	    buttonLevel9 = game.phaser_game.add.button(400, 420, 'buttonLevel9', actionOnClickLevel9, this, 2, 1, 0);
+		game.phaser_game.add.tileSprite(0, 0, 800, 600, 'menu');
+
+	    buttonLevel1 = game.phaser_game.add.button(50, 220, 'buttonPlay', actionOnClickLevel1, this, 1, 0, 2);
+	    buttonLevel2 = game.phaser_game.add.button(320, 220, 'buttonPlay', actionOnClickLevel2, this, 1, 0, 2);
+	    buttonLevel3 = game.phaser_game.add.button(600, 220, 'buttonPlay', actionOnClickLevel3, this, 1, 0, 2);
+
+	    buttonLevel4 = game.phaser_game.add.button(50, 360, 'buttonPlay', actionOnClickLevel4, this, 1, 0, 2);
+	    buttonLevel5 = game.phaser_game.add.button(320, 360, 'buttonPlay', actionOnClickLevel5, this, 1, 0, 2);
+	    buttonLevel6 = game.phaser_game.add.button(600, 360, 'buttonPlay', actionOnClickLevel6, this, 1, 0, 2);
+
+	    buttonLevel7 = game.phaser_game.add.button(50, 510, 'buttonPlay', actionOnClickLevel7, this, 1, 0, 2);
+	    buttonLevel8 = game.phaser_game.add.button(320, 510, 'buttonPlay', actionOnClickLevel8, this, 1, 0, 2);
+	    buttonLevel9 = game.phaser_game.add.button(600, 510, 'buttonPlay', actionOnClickLevel9, this, 1, 0, 2);
 	},
 
 	update: function(){
