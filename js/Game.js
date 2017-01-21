@@ -25,6 +25,7 @@ Game.prototype.init = function(){
     this.phaser_game.state.add("winState", WinState);
     this.phaser_game.state.add("loseState", LoseState);
     this.phaser_game.state.add("creditState", CreditState);
+    this.phaser_game.state.add("level1State", Level1State);
     this.phaser_game.state.start("preloadState");
 }
 
