@@ -10,6 +10,7 @@ WinState.prototype = {
 
 		game.phaser_game.stage.backgroundColor = "#4488AA";
 		game.phaser_game.add.tileSprite(220, 150, 339, 240, 'winVictory');
+		game.phaser_game.add.tileSprite(172, 20, 435, 83, 'congrat');
 
 		buttonChoose = game.phaser_game.add.button(20, 420, 'buttonChoose', actionOnClickChoose, this, 2, 1, 0);
 
