@@ -1,7 +1,7 @@
 var LevelTwoState = function(){};
-
+var touchPad;
 console.log("LevelTwoState");
-
+var touchPad;
 LevelTwoState.prototype = {
 	preload: function(){
 		console.log("preload level2");
@@ -13,9 +13,24 @@ LevelTwoState.prototype = {
 
 		game.phaser_game.input.mouse.capture = true;
 
+		// un objet avec en param (x,y,scaling) pour choisir son emplacement dans le monde et sa taille dans le 3ème champ
+		var scaling = 0.15;// taille de tout les éléments
+
+		var redBoat = new RedBoat(200,200,scaling);
+		var redBoat = new RedBoat(500,250,scaling);
+		var greenCorail = new GreenCorail(480,300,scaling);
+
+		//Mettre le touchpad à x = 0, x = 500
 		touchPad = new TouchPad(0,500);
+
+		
 	},
 	update: function(){
 		touchPad.update();
+	},
+
+	render: function(){
+		game.phaser_game.debug.text("Left Button: " + game.phaser_game.input.activePointer.leftButton.isDown, 300, 132);
+		//game.phaser_game.debug.text("Over: " + touchPad.input.pointerOver(), 32, 32);
 	}
 }
