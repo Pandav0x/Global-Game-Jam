@@ -22,6 +22,15 @@ ChooseState.prototype = {
 	    buttonLevel7 = game.phaser_game.add.button(50, 510, 'buttonPlay', actionOnClickLevel7, this, 1, 0, 2);
 	    buttonLevel8 = game.phaser_game.add.button(320, 510, 'buttonPlay', actionOnClickLevel8, this, 1, 0, 2);
 	    buttonLevel9 = game.phaser_game.add.button(600, 510, 'buttonPlay', actionOnClickLevel9, this, 1, 0, 2);
+
+		this.music = {};
+		this.music.intro = game.phaser_game.add.audio('musicIntroMenu');
+		this.music.core = game.phaser_game.add.audio('musicLoopMenu');
+		this.music.core.loop = true;
+
+		this.music.intro.play();
+		this.music.intro.onStop.add(this.music.core.play);
+		
 	},
 
 	update: function(){
@@ -66,8 +75,16 @@ ChooseState.prototype = {
 		}
 
 	}
-	
+
+	// kill: function() {
+	// 	this.music.intro.stop();
+	// 	this.music.loop.stop();
+	// }
 }
+
+// ChooseState.prototype.kill = {
+//
+// }
 
 function actionOnClickLevel1 () {
 
