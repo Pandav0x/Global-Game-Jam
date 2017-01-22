@@ -15,7 +15,7 @@ var Wave = function(x,y,spreading){
 
     //this.circle.body.sprite.anchor.setTo(0.5,0.5);
     this.circle.body.velocity.x = this.spreading;
-    this.circle.body.velocity.y = -60;
+    this.circle.body.velocity.y = -500 + Math.pow(spreading, 2)/2;
 
     //this.circle.body.sprite.scale.x = this.scale;
     //this.circle.body.sprite.scale.y = this.scale;
