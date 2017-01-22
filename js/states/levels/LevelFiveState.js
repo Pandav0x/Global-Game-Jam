@@ -21,6 +21,9 @@ LevelFiveState.prototype = {
 		scaling = 0.3;
 		var pilotiHouse = new PilotiHouse(350,200, scaling);
 		var mountain = new Mountain(30,350, scaling);
+		
+		arrow = game.phaser_game.add.button(10, 464, 'arrow', listener, this, 2, 1, 0);
+		arrow.scale.setTo(0.05,0.15);
 //commentaire
 	},
 	update: function(){

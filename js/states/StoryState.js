@@ -4,7 +4,7 @@ console.log("StoryState");
 
 StoryState.prototype = {
 	preload: function(){
-		console.log("preload ggj");
+		console.log("preload story");
 	},
 	create: function(){
 

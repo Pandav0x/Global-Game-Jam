@@ -28,6 +28,9 @@ LevelSixState.prototype = {
 		var pinkCorail = new PinkCorail(100,300,scaling);
 
 		touchPad = new TouchPad(0,500);
+		
+		arrow = game.phaser_game.add.button(10, 464, 'arrow', listener, this, 2, 1, 0);
+		arrow.scale.setTo(0.05,0.15);
 	},
 	update: function(){
 		touchPad.update();

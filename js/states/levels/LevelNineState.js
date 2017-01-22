@@ -27,6 +27,9 @@ LevelNineState.prototype = {
 
 		scaling = 0.1;
 		var pinkCorail = new PinkCorail(550,150,scaling);
+		
+		arrow = game.phaser_game.add.button(10, 464, 'arrow', listener, this, 2, 1, 0);
+		arrow.scale.setTo(0.05,0.15);
 	},
 	update: function(){
 		touchPad.update();

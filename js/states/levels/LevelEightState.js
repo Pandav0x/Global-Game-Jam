@@ -24,6 +24,9 @@ LevelEightState.prototype = {
 		var mountain = new Mountain(150,150,scaling);
 		var mountain = new Mountain(480,250,scaling);
 		var mountain = new Mountain(230	,350,scaling);
+		
+		arrow = game.phaser_game.add.button(10, 464, 'arrow', listener, this, 2, 1, 0);
+		arrow.scale.setTo(0.05,0.15);
 	},
 	update: function(){
 		touchPad.update();

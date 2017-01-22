@@ -25,6 +25,9 @@ LevelSevenState.prototype = {
 		var greenCorail = new GreenCorail(450,300,scaling);
 		var greenCorail = new GreenCorail(50,300,scaling);
 
+		
+		arrow = game.phaser_game.add.button(10, 464, 'arrow', listener, this, 2, 1, 0);
+		arrow.scale.setTo(0.05,0.15);
 	},
 	update: function(){
 		touchPad.update();

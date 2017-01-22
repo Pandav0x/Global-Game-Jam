@@ -18,11 +18,12 @@ LevelOneState.prototype = {
 
 		var redBoat = new RedBoat(200,300,scaling);
 		var rockHouse = new RockHouse(500,200,scaling);
+		
+		arrow = game.phaser_game.add.button(10, 464, 'arrow', listener, this, 2, 1, 0);
+		arrow.scale.setTo(0.05,0.15);
 
 		//Mettre le touchpad à x = 0, x = 500
 		touchPad = new TouchPad(0,500);
-		
-		buttonTest = game.phaser_game.add.button(20, 420, 'buttonNext', actionOnClickTest, this, 2, 1, 0);
 
 	},
 	update: function(){
@@ -41,8 +42,8 @@ LevelOneState.prototype = {
 	}
 }
 
-function actionOnClickTest () {
+function listener () {
 
-	console.log("winState");
-    game.phaser_game.state.start("winState");
+    game.phaser_game.state.start("chooseState");
 }
+
