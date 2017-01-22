@@ -88,7 +88,13 @@ ChooseState.prototype = {
 
 function actionOnClickLevel1 () {
 
-    game.phaser_game.state.start("levelOneState");
+if(game.finishedLevels[0]){
+		game.phaser_game.state.start("levelOneState");
+	}else{
+		game.phaser_game.state.start("levelOneTutorialState");
+	}
+	
+    
 }
 
 function actionOnClickLevel2 () {

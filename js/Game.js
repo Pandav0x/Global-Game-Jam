@@ -26,12 +26,16 @@ Game.prototype.init = function(){
     this.phaser_game = new Phaser.Game(800, 600, Phaser.AUTO, 'gameCanvas');
 
     this.phaser_game.state.add("preloadState", PreloadState);
+    this.phaser_game.state.add("ggjState", GGJState);
+    this.phaser_game.state.add("creditsState", CreditsState);
+    this.phaser_game.state.add("storyState", StoryState);
     this.phaser_game.state.add("menuState", MenuState);
     this.phaser_game.state.add("gameState", GameState);
     this.phaser_game.state.add("winState", WinState);
     this.phaser_game.state.add("loseState", LoseState);
     this.phaser_game.state.add("creditState", CreditState);
     this.phaser_game.state.add("chooseState", ChooseState);
+    this.phaser_game.state.add("levelOneTutorialState", LevelOneTutorialState);
     this.phaser_game.state.add("levelOneState", LevelOneState);
     this.phaser_game.state.add("levelTwoState", LevelTwoState);
     this.phaser_game.state.add("levelThreeState", LevelThreeState);

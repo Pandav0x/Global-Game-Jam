@@ -6,6 +6,7 @@ var TouchPad = function(x,y){
 
     this.fireRate = 500;
     this.nextFire = 0; // shoot da wave
+    this.numberWaves = 10;
 
     this.mouseX;
     this.mouseY;
@@ -32,11 +33,6 @@ TouchPad.prototype.update = function(){
             if(this.waveStrength <= 500)
                 this.waveStrength = 500;
 
-            var wave = new Wave(this.mouseX,this.mouseY);
-
-            this.waveArrays[this.back] = wave;
-            this.back += 1;
-
             console.log("Wave Down");
 
             //wave intensity
@@ -48,6 +44,17 @@ TouchPad.prototype.update = function(){
               console.log(this.waveStrength);
             //end
 
+            for(var i = 0; i <= this.numberWaves; i++){
+
+                var angleThingies = i * Math.cos(Math.PI * i);
+                console.log("angleThingies" + angleThingies);
+
+                var wave = new Wave(this.mouseX,this.mouseY, angleThingies);
+
+                this.waveArrays[this.back] = wave;
+                this.back += 1;
+            }
+
             this.nextFire = game.phaser_game.time.now + this.fireRate;
         }
     }
@@ -56,9 +63,9 @@ TouchPad.prototype.update = function(){
         this.back = 0;
     }
 
-    $.each(this.waveArrays,function(index,value){
+    /*$.each(this.waveArrays,function(index,value){
         value.growth();
-    });
+    });*/
 
     /*for (var i = 0; i <= this.back; i++){
         if(this.waveArrays.length > 0){

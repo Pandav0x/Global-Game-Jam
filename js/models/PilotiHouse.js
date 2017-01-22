@@ -6,4 +6,6 @@ var PilotiHouse = function(x,y, scaling){
     this.sprite = game.phaser_game.add.sprite(x,y,'pilotiHouse');
 
     this.sprite.scale.setTo(this.scaling,this.scaling);
+	
+	var destroy = false;
 }
