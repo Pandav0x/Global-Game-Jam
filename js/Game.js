@@ -27,6 +27,7 @@ Game.prototype.init = function(){
 
     this.phaser_game.state.add("preloadState", PreloadState);
     this.phaser_game.state.add("ggjState", GGJState);
+    this.phaser_game.state.add("creditsState", CreditsState);
     this.phaser_game.state.add("storyState", StoryState);
     this.phaser_game.state.add("menuState", MenuState);
     this.phaser_game.state.add("gameState", GameState);
