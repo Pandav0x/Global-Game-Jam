@@ -19,6 +19,9 @@ PreloadState.prototype = {
 		game.phaser_game.load.image('winVictory', game.sprite_folder + "WinVictory.png");
 		game.phaser_game.load.image('laurier', game.sprite_folder + "laurier.png");
 		game.phaser_game.load.image('congrat', game.sprite_folder + "Congrat.png");
+		game.phaser_game.load.image('ggjlogo', game.sprite_folder + "GGJLogo.png");
+		game.phaser_game.load.image('story', game.sprite_folder + "Story.png");
+		game.phaser_game.load.image('tuto', game.sprite_folder + "Tuto.png");
 
 		game.phaser_game.load.atlasJSONHash('buttonPlay', game.sprite_folder+'button.png', game.sprite_folder+'button.json');
 		game.phaser_game.load.atlasJSONHash('buttonChoose', game.sprite_folder+'buttonPlay.png', game.sprite_folder+'buttonPlay.json');
@@ -28,7 +31,7 @@ PreloadState.prototype = {
 	},
 	create: function(){
 		console.log("create preload");
-		game.phaser_game.state.start("chooseState");
+		game.phaser_game.state.start("ggjState");
 	},
 	update: function(){}
 }
