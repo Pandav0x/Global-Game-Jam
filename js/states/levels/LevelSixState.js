@@ -31,6 +31,11 @@ LevelSixState.prototype = {
 		
 		arrow = game.phaser_game.add.button(10, 464, 'arrow', listener, this, 2, 1, 0);
 		arrow.scale.setTo(0.05,0.15);
+
+		this.bgMusic = game.phaser_game.add.audio('musicMain');
+		this.jingle = game.phaser_game.add.audio('jingleWin');
+		this.bgMusic.loop = true;
+		this.bgMusic.play();
 	},
 	update: function(){
 		touchPad.update();

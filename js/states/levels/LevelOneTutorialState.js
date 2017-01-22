@@ -13,6 +13,11 @@ LevelOneTutorialState.prototype = {
 		console.log("create tuto");
 		
 		game.phaser_game.input.mouse.capture = true;
+
+		this.bgMusic = game.phaser_game.add.audio('musicMain');
+		this.jingle = game.phaser_game.add.audio('jingleWin');
+		this.bgMusic.loop = true;
+		this.bgMusic.play();
 	},
 	update: function(){
 		

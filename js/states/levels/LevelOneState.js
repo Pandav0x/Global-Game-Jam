@@ -25,6 +25,11 @@ LevelOneState.prototype = {
 		//Mettre le touchpad à x = 0, x = 500
 		touchPad = new TouchPad(0,500);
 
+		this.bgMusic = game.phaser_game.add.audio('musicMain');
+		this.jingle = game.phaser_game.add.audio('jingleWin');
+		this.bgMusic.loop = true;
+		this.bgMusic.play();
+
 	},
 	update: function(){
 		touchPad.update();
@@ -43,7 +48,8 @@ LevelOneState.prototype = {
 }
 
 function listener () {
-
+	this.bgMusic.stop();
+	this.jingle.play();
     game.phaser_game.state.start("chooseState");
 }
 

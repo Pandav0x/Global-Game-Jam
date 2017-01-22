@@ -2,8 +2,6 @@ var ChooseState = function(){};
 
 console.log("ChooseState");
 
-
-
 ChooseState.prototype = {
 	preload: function(){
 		console.log("preload Choose");
@@ -78,12 +76,12 @@ ChooseState.prototype = {
 			var laurier = new Laurier(750,530,scaling);
 		}
 
-	},
+	}
 
-	/*kill: function() {
-	 	this.music.intro.playing ? this.music.intro.pause() :
-	 	this.music.core.pause();
-	 }*/
+	// kill: function() {
+	// 	this.music.intro.stop();
+	// 	this.music.core.stop();
+	// }
 }
 
 // ChooseState.prototype.kill = {
@@ -96,7 +94,6 @@ function actionOnClickLevel1 () {
 	this.core.stop();
 
 if(game.finishedLevels[0]){
-
 		game.phaser_game.state.start("levelOneState");
 	}else{
 		game.phaser_game.state.start("levelOneTutorialState");
