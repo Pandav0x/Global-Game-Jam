@@ -30,8 +30,9 @@ PreloadState.prototype = {
 		game.phaser_game.load.atlasJSONHash('buttonNext', game.sprite_folder+'NextButton.png', game.sprite_folder+'NextButton.json');
 		game.phaser_game.load.atlasJSONHash('buttonMenu', game.sprite_folder+'MenuButton.png', game.sprite_folder+'MenuButton.json');
 		
-		game.phaser_game.load.audio('musicIntroMenu', [game.ambiance_folder+"PoseidonTitleTheme-intro.wav"]);
-		game.phaser_game.load.audio('musicLoopMenu', [game.ambiance_folder+"PoseidonTitleTheme-boucle.wav"]);
+		// game.phaser_game.load.audio('musicIntroMenu', [game.ambiance_folder+"PoseidonTitleTheme-intro.wav"]);
+		// game.phaser_game.load.audio('musicLoopMenu', [game.ambiance_folder+"PoseidonTitleTheme-boucle.wav"]);
+		game.phaser_game.load.audio('musicIntro', [game.ambiance_folder+"PoseidonTitleTheme.wav"]);
 		game.phaser_game.load.audio('musicMain', [game.ambiance_folder+"PoseidonMainTheme.wav"]);
 		game.phaser_game.load.audio('jingleWin', [game.ambiance_folder+"PoseidonWinJingle.wav"]);
 	},
