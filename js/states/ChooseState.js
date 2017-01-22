@@ -34,7 +34,6 @@ ChooseState.prototype = {
 		// console.log("this.intro: ",this.intro);
 		//this.intro.stop();
 		this.music = game.phaser_game.add.audio('musicIntro');
-		this.music.loop = true;
 		this.music.play();
 
 	},
