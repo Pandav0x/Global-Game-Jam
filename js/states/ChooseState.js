@@ -2,6 +2,8 @@ var ChooseState = function(){};
 
 console.log("ChooseState");
 
+
+
 ChooseState.prototype = {
 	preload: function(){
 		console.log("preload Choose");
@@ -23,14 +25,16 @@ ChooseState.prototype = {
 	    buttonLevel8 = game.phaser_game.add.button(320, 510, 'buttonPlay', actionOnClickLevel8, this, 1, 0, 2);
 	    buttonLevel9 = game.phaser_game.add.button(600, 510, 'buttonPlay', actionOnClickLevel9, this, 1, 0, 2);
 
-		this.music = {};
-		this.music.intro = game.phaser_game.add.audio('musicIntroMenu');
-		this.music.core = game.phaser_game.add.audio('musicLoopMenu');
-		this.music.core.loop = true;
-
-		this.music.intro.play();
-		this.music.intro.onStop.add(this.music.core.play);
-		
+		//this.music = {};
+		this.intro = game.phaser_game.add.audio('musicIntroMenu');
+		this.core = game.phaser_game.add.audio('musicLoopMenu');
+		this.core.loop = true;
+		console.log("this.core: ",this.core);
+		console.log("this.intro: ",this.intro);
+		this.intro.play();
+		this.intro.onStop.add(function (obj) {obj.play();}, this.core);
+		console.log("this.intro: ",this.intro);
+		//this.intro.stop();
 	},
 
 	update: function(){
@@ -74,12 +78,12 @@ ChooseState.prototype = {
 			var laurier = new Laurier(750,530,scaling);
 		}
 
-	}
+	},
 
-	// kill: function() {
-	// 	this.music.intro.stop();
-	// 	this.music.loop.stop();
-	// }
+	/*kill: function() {
+	 	this.music.intro.playing ? this.music.intro.pause() :
+	 	this.music.core.pause();
+	 }*/
 }
 
 // ChooseState.prototype.kill = {
@@ -88,7 +92,11 @@ ChooseState.prototype = {
 
 function actionOnClickLevel1 () {
 
+	this.intro.stop();
+	this.core.stop();
+
 if(game.finishedLevels[0]){
+
 		game.phaser_game.state.start("levelOneState");
 	}else{
 		game.phaser_game.state.start("levelOneTutorialState");
@@ -99,39 +107,63 @@ if(game.finishedLevels[0]){
 
 function actionOnClickLevel2 () {
 
+	this.intro.stop();
+	this.core.stop();
+
     game.phaser_game.state.start("levelTwoState");
 }
 
 function actionOnClickLevel3 () {
+
+	this.intro.stop();
+	this.core.stop();
 
     game.phaser_game.state.start("levelThreeState");
 }
 
 function actionOnClickLevel4 () {
 
+	this.intro.stop();
+	this.core.stop();
+
     game.phaser_game.state.start("levelFourState");
 }
 
 function actionOnClickLevel5 () {
+
+	this.intro.stop();
+	this.core.stop();
 
     game.phaser_game.state.start("levelFiveState");
 }
 
 function actionOnClickLevel6 () {
 
+	this.intro.stop();
+	this.core.stop();
+
     game.phaser_game.state.start("levelSixState");
 }
 
 function actionOnClickLevel7 () {
+
+	this.intro.stop();
+	this.core.stop();
 
     game.phaser_game.state.start("levelSevenState");
 }
 
 function actionOnClickLevel8 () {
 
+	this.intro.stop();
+	this.core.stop();
+
     game.phaser_game.state.start("levelEightState");
 }
 function actionOnClickLevel9 () {
+
+	this.intro.stop();
+	this.core.stop();
 
     game.phaser_game.state.start("levelNineState");
 }
